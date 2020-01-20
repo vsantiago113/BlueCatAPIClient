@@ -1,4 +1,6 @@
-# BlueCat Client
+# BlueCatClient
+
+## BlueCat Network
 
 ### Description
 This is a wrapper to make it easier to use the API to interact with BlueCat to get, update, delete and create records.
