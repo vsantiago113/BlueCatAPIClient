@@ -15,7 +15,7 @@ def run_full_test():
     client.connect(url, username, password)
 
     print(f'***** Testing: GET method '.ljust(60, '*'))
-    response = client.get(method='searchByCategory', keyword='MyIPV4Block', category='all')
+    response = client.get(method='searchByCategory', keyword='MyIPV4Block', category='all', count=1)
     print(json.dumps(response.json(), indent=4))
 
     print(f'***** Testing: Logout '.ljust(60, '*'))

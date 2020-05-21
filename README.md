@@ -44,7 +44,7 @@ import json
 client = BlueCatAPIClient.Client()
 client.connect(url='https://BlueCat-server.local', username='admin', password='Admin123')
 
-response = client.get(method='searchByCategory', keyword='MyIPV4Block', category='all')
+response = client.get(method='searchByCategory', keyword='MyIPV4Block', category='all', count=1)
 print(json.dumps(response.json(), indent=4))
 
 client.disconnect()
