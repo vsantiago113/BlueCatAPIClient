@@ -48,7 +48,7 @@ class Client(APIPlugin):
         url = f'{self.base_url}/{method.strip("/")}' if url is None else url
         return self.session.get(url, json=data, params=kwargs)
 
-    def post(self, url: [str, None] = None, method: [str, bytes] = '', data: dict = None,
+    def post(self, url: [str, None] = None, method: [str, bytes] = '', data: [dict, list] = None,
              **kwargs) -> requests.Response:
         """
 
@@ -61,7 +61,7 @@ class Client(APIPlugin):
         url = f'{self.base_url}/{method.strip("/")}' if url is None else url
         return self.session.post(url, json=data, params=kwargs)
 
-    def put(self, url: [str, None] = None, method='update', data: dict = None,
+    def put(self, url: [str, None] = None, method='update', data: [dict, list] = None,
             **kwargs) -> requests.Response:
         """
 
@@ -74,7 +74,7 @@ class Client(APIPlugin):
         url = f'{self.base_url}/{method.strip("/")}' if url is None else url
         return self.session.put(url, json=data, params=kwargs)
 
-    def delete(self, url: [str, None] = None, method='delete', data: dict = None,
+    def delete(self, url: [str, None] = None, method='delete', data: [dict, list] = None,
                **kwargs) -> requests.Response:
         """
 
