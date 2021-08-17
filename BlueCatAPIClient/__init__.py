@@ -15,7 +15,7 @@ class Client(APIPlugin):
         session.headers = self.headers
         session.verify = self.verify
         response = session.get(f'{self.base_url}/login', params={'username': username, 'password': password})
-        token = re.search(r'->\s(\w+:\s\w+(?:==)?)\s<-', response.text, flags=re.I)
+        token = re.search(r'->\s(\w+:\s[\w+\/]+(?:==)?)\s<-', response.text, flags=re.I)
         if token:
             self.token = token.group(1)
             session.headers.update({'Authorization': self.token})
